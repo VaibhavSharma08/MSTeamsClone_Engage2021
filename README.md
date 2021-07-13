@@ -17,6 +17,8 @@ The code demo currently works in Google Chrome after going through some specific
 
 **Step 5**: Allow the browser to use your camera and microphone. Then use another device or open another tab and navigate to the same URL and enter the same room.
 
+![image](https://user-images.githubusercontent.com/62774848/125506307-61689be8-882c-4dfa-ae6a-f31da8218678.png)
+
 Voila! You can now chat with the other person from your browser.
 
 **Reason for doing this:** The getUserMedia function only works over HTTPS. Since the website is currently available over HTTP only, we need to explicitly enable data transmission over HTTP. Hence the extra steps.
@@ -49,4 +51,4 @@ College - Netaji Subhas University of Technology
 
 Contact Number - 9873994422
 
-Email - vaibhavs755@gmail.com
+Email - vaibhavs755@outlook.com
