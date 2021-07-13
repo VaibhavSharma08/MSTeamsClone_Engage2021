@@ -5,6 +5,7 @@ The website is currently live at "http://35.80.201.240:3000/"
 # How to Run
 # a) Running the Live Website Demo
 The code demo currently works in Google Chrome after going through some specific steps. These are given as follows:
+
 **Step 1**: Open Google Chrome and enter "chrome://flags/" in the URL. 
 
 **Step 2**: Enter the term "Insecure origins treated as secure" in the search bar. In this section enter the URL -> "http://35.80.201.240:3000" and Enable the Flag.
