@@ -19,16 +19,21 @@ The code demo currently works in Google Chrome after going through some specific
 
 Voila! You can now chat with the other person from your browser.
 
-Reason for doing this: The getUserMedia function only works over HTTPS. Since the website is currently available over HTTP only, we need to explicitly enable data transmission over HTTP. Hence the extra steps.
+**Reason for doing this:** The getUserMedia function only works over HTTPS. Since the website is currently available over HTTP only, we need to explicitly enable data transmission over HTTP. Hence the extra steps.
 
 
 # b) Running the Local Host Demo
 The code demo has been tested to work in Google Chrome and Mozilla Firefox. The steps are given as follows:
+
 **Step 1**: Open the command prompt and navigate to the source code directory. 
 
 **Step 2**: Run the command "node server.js". 
 
+![image](https://user-images.githubusercontent.com/62774848/125500788-2bc19499-24f6-4c46-a7c7-a90b9ffce0d2.png)
+
 **Step 3**: Navigate to "localhost:3000/". Enter the room you want to connect to. Allow the browser to use your camera and microphone. Then open another tab and navigate to the same URL and enter the same room.
+
+![image](https://user-images.githubusercontent.com/62774848/125501205-b1b171a1-4518-4d10-8972-992db3e2da95.png)
 
 Voila! You can now chat with yourself from your browser :)
 
