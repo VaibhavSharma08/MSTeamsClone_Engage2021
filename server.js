@@ -12,22 +12,22 @@ io.on('connection', (socket) => {
 
     // These events are emitted only to the sender socket.
     if (numberOfClients == 0) {
-      console.log(`Creating room ${roomId} and emitting room_created socket event`)
+      console.log(`Creating room ${roomId} and emitting created_room socket event`)
       socket.join(roomId)
       socket.emit('room_created', roomId)
     } else if (numberOfClients == 1) {
-      console.log(`Joining room ${roomId} and emitting room_joined socket event`)
+      console.log(`Joining room ${roomId} and emitting joined_room socket event`)
       socket.join(roomId)
       socket.emit('room_joined', roomId)
     } else {
-      console.log(`Can't join room ${roomId}, emitting full_room socket event`)
+      console.log(`Cannot join room ${roomId}, emitting full_room socket event`)
       socket.emit('full_room', roomId)
     }
   })
 
-  // These events are emitted to all the sockets connected to the same room except the sender.
+  // The following events are emitted to all the sockets connected to the same room except the sender.
   socket.on('start_call', (roomId) => {
-    console.log(`Broadcasting start_call event to peers in room ${roomId}`)
+    console.log(`Broadcasting start_call event to all peers in room ${roomId}`)
     socket.broadcast.to(roomId).emit('start_call')
   })
   socket.on('webrtc_offer', (event) => {
@@ -44,7 +44,7 @@ io.on('connection', (socket) => {
   })
 })
 
-// START THE SERVER =================================================================
+// Starting the Server =================================================================
 const port = process.env.PORT || 3000
 server.listen(port, () => {
   console.log(`Express server listening on port ${port}`)
